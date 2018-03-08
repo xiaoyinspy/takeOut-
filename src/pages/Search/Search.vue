@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <section class="search">
-      <header class="header">搜索</header>
+      <HeaderTop title="搜索"/>
       <div class="containerC">
         <div class="searchInput">
           <input type="text" placeholder="请输入商家或美食名称">
@@ -12,9 +12,46 @@
   </div>
 </template>
 <script>
-export default {}
+
+  import HeaderTop from "../../components/HeaderTop/HeaderTop.vue"
+
+  export default {
+    components:{
+      HeaderTop
+    }
+  }
 
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-
+  @import "../../common/stylus/mixin.styl"
+  .content
+    position relative
+    height 100%
+    >section
+      width 100%
+      display block
+      .containerC
+        padding-top 40px
+        overflow hidden
+        .searchInput
+          margin-top
+          height 60px
+          background white
+          padding 10px
+          >input
+            width 80%
+            height 40px
+            padding 0px
+            background #f5f5f5
+            font-weight 200
+          .button
+            border-style: none
+            list-style-type none
+            background #02a774
+            font-weight bolder
+            height 40px
+            width 15%
+            color white
+            font-size 20px
+            line-height 20px
 </style>

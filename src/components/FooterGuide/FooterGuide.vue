@@ -1,33 +1,35 @@
 <template>
   <footer class=" footer on">
-    <a href="javascript:" class="guide-item on">
+    <router-link to="/msite"  class="guide-item" :class="{on:$route.path === '/msite'}" >
             <span class="item-icon">
                 <i class="iconfont icon-waimai"></i>
             </span>
       <span>外卖</span>
-    </a>
-    <a href="javascript:" class="guide-item">
+    </router-link>
+    <router-link to="/search" class="guide-item" :class="{on:$route.path === '/search'}" >
             <span class="item-icon">
                 <i class="iconfont icon-search"></i>
             </span>
       <span>搜索</span>
-    </a>
-    <a href="javascript:" class="guide-item">
+    </router-link >
+    <router-link to="/order" class="guide-item" :class="{on: $route.path === '/order'}"  >
             <span class="item-icon">
                 <i class="iconfont icon-dingdan"></i>
             </span>
       <span>订单</span>
-    </a>
-    <a href="javascript:" class="guide-item">
+    </router-link>
+    <router-link to="/profile" class="guide-item" :class="{on:$route.path === '/profile'}" >
             <span class="item-icon">
                 <i class="iconfont icon-geren"></i>
             </span>
       <span>我的</span>
-    </a>
+    </router-link>
   </footer>
 </template>
 <script>
-export default {}
+export default {
+
+}
 
 </script>
 <style lang="stylus" rel="stylesheet/stylus">

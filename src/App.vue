@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <router-link to="/msite"></router-link>
-    <router-link to="/search"></router-link>
-    <router-link to="/order"></router-link>
-    <router-link to="/profile"></router-link>
-    <FooterGuide></FooterGuide>
+    <!--显示当前路由组件-->
+
+    <router-view></router-view>
+    <FooterGuide v-show = "$route.meta.showFooter"></FooterGuide>
   </div>
 </template>
 
@@ -13,7 +12,7 @@
   import FooterGuide from "./components/FooterGuide/FooterGuide.vue"
   export default {
     components: {
-        FooterGuide
+        FooterGuide,
     }
   }
 </script>
@@ -21,6 +20,9 @@
 <style lang="stylus" rel="stylesheet/stylus">
 
   #app
+    width 100%
     height 100%
+    background #f5f5f5
+    position relative
 
 </style>
